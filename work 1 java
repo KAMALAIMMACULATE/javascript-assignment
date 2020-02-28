@@ -1,0 +1,21 @@
+MY ALORITHM WAKING UP
+
+I wake up in the morning
+I  pray 
+Make my bed
+Brush my teeth and bath
+smear my body with oil
+put on clothes and shoes
+Go for morning tea
+Go to class.
+function tiredChecker () {
+  var getTired="sleep";
+  var response
+  if(getTired) {
+    return response="sleep";
+  } else{
+    return response="goRead";
+   }
+  }
+console.log(tiredChecker());
+
