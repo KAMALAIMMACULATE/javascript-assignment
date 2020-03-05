@@ -1,21 +1,30 @@
-MY ALORITHM WAKING UP
+var phoneNumber = 0789193253
+var amount = 40
+var pin = 6666
 
-I wake up in the morning
-I  pray 
-Make my bed
-Brush my teeth and bath
-smear my body with oil
-put on clothes and shoes
-Go for morning tea
-Go to class.
-function tiredChecker () {
-  var getTired="sleep";
-  var response
-  if(getTired) {
-    return response="sleep";
-  } else{
-    return response="goRead";
-   }
+function getMobileBalance (phoneNumber, pin) {
+  return 30
+}
+
+function assignCredit (phoneNumber) {
+  return true
+}
+
+function sendSMSNotification (phoneNumber,message) {
+  return true
+}
+
+function withdrawMoney (phoneNumber,amount,pin) {
+  var balance = getMobileBalance (phoneNumber,pin)
+  if (amount <= balance) {
+    assignCredit (phoneNumber)
+    sendSMSNotification (phoneNumber,"you have received money")
+    return true
+  } else {
+      sendSMSNotification (phoneNumber,"Insufficient funds")
+      return false
+    }
   }
-console.log(tiredChecker());
 
+var response = getMobileBalance(phoneNumber,amount,pin)
+console.log(response)
